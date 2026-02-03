@@ -215,5 +215,4 @@ function sayYes() {
 
 </body>
 </html>
-https://i.postimg.cc/kGdGztcX/IMG-20251025-WA0050.jpg
-https://i.postimg.cc/HkjYS2md/872a6e8fa6aafc89c25de032d63c0966.jpg
+
