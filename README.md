@@ -1,5 +1,3 @@
-# valentine-for-baby
-just me asking my girlfriend to be my valentine
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,48 +6,36 @@ just me asking my girlfriend to be my valentine
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; }
-
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
-    url("BACKGROUND_IMAGE_URL") center/cover no-repeat fixed;
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url("BACKGROUND_IMAGE_URL") center / cover no-repeat fixed;
   color: white;
-  overflow-x: hidden;
 }
 
 section {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  justify-content: center;
   text-align: center;
+  padding: 30px;
 }
 
 .card {
   background: rgba(255,255,255,0.95);
   color: #5a1a2e;
-  padding: 40px;
-  border-radius: 22px;
-  max-width: 650px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-  animation: fadeIn 1.6s ease;
+  padding: 35px;
+  border-radius: 20px;
+  max-width: 700px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 h1 {
-  font-size: 2.3em;
   margin-bottom: 20px;
 }
-
-p {
-  line-height: 1.7;
-  font-size: 1.05em;
-}
-
-.hidden { display: none; }
 
 button {
   padding: 14px 32px;
@@ -57,65 +43,49 @@ button {
   border: none;
   font-size: 1em;
   cursor: pointer;
-  margin: 15px;
   background: #ff4d6d;
   color: white;
-  transition: transform 0.2s;
+  margin: 10px;
 }
-button:hover { transform: scale(1.1); }
 
-.gift {
+button:hover {
+  transform: scale(1.08);
+}
+
+.gift, .envelope {
   font-size: 90px;
   cursor: pointer;
-  animation: bounce 1.4s infinite;
 }
 
-.envelope {
-  font-size: 80px;
-  cursor: pointer;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* NO button runaway */
 #noBtn {
   background: #aaa;
   position: relative;
 }
 
-/* Hearts */
 .heart {
   position: fixed;
   bottom: -20px;
   font-size: 22px;
-  animation: floatUp 6s linear forwards;
+  animation: float 6s linear forwards;
 }
 
-@keyframes floatUp {
+@keyframes float {
   to {
     transform: translateY(-120vh);
     opacity: 0;
   }
 }
 
-/* Meme overlay */
 #meme {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
   display: none;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 999;
 }
+
 #meme img {
   max-width: 90%;
   border-radius: 20px;
@@ -125,18 +95,18 @@ button:hover { transform: scale(1.1); }
 
 <body>
 
-<!-- GIFT -->
+<!-- SECTION 1 -->
 <section>
   <div class="card">
     <h1>Hey baby 💕</h1>
-    <p>I made something for you.</p>
-    <div class="gift" onclick="openGift()">🎁</div>
+    <p>I made something just for you.</p>
+    <div class="gift" onclick="scrollToPoem()">🎁</div>
     <p><em>Tap the gift</em></p>
   </div>
 </section>
 
-<!-- POEM -->
-<section id="poem" class="hidden">
+<!-- SECTION 2 -->
+<section id="poem">
   <div class="card">
     <h1>My handsome wife,</h1>
 
@@ -187,20 +157,20 @@ button:hover { transform: scale(1.1); }
       every day, without hesitation.
     </p>
 
-    <p><em>Scroll down…</em></p>
+    <p><em>Scroll down 💌</em></p>
   </div>
 </section>
 
-<!-- ENVELOPE -->
-<section id="letter" class="hidden">
+<!-- SECTION 3 -->
+<section>
   <div class="card">
-    <div class="envelope" onclick="openLetter()">💌</div>
+    <div class="envelope" onclick="scrollToQuestion()">💌</div>
     <p>Open this</p>
   </div>
 </section>
 
-<!-- QUESTION -->
-<section id="question" class="hidden">
+<!-- SECTION 4 -->
+<section id="question">
   <div class="card">
     <h1>So hey…</h1>
     <h1>Will you do Valentine’s Day with me? 💖</h1>
@@ -216,40 +186,12 @@ button:hover { transform: scale(1.1); }
 </div>
 
 <script>
-function openGift() {
-  document.getElementById("poem").classList.remove("hidden");
-  document.getElementById("letter").classList.remove("hidden");
-  setTimeout(() => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth"
-    });
-  }, 300);
-}function openGift() {
-  document.getElementById("poem").classList.remove("hidden");
-  document.getElementById("letter").classList.remove("hidden");
-  setTimeout(() => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth"
-    });
-  }, 300);
-}
-  document.getElementById("poem").classList.remove("hidden");
-  window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+function scrollToPoem() {
+  document.getElementById("poem").scrollIntoView({ behavior: "smooth" });
 }
 
-function openLetter() {
-  document.getElementById("question").classList.remove("hidden");
-  setTimeout(() => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
-    });
-  }, 300);
-}
-  document.getElementById("question").classList.remove("hidden");
-  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+function scrollToQuestion() {
+  document.getElementById("question").scrollIntoView({ behavior: "smooth" });
 }
 
 function runAway() {
@@ -260,22 +202,18 @@ function runAway() {
 
 function sayYes() {
   document.getElementById("meme").style.display = "flex";
-  for (let i = 0; i < 35; i++) {
-    createHeart();
+  for (let i = 0; i < 30; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
   }
-}
-
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  document.body.appendChild(heart);
-  setTimeout(() => heart.remove(), 6000);
 }
 </script>
 
 </body>
 </html>
-https://imgur.com/a/ZozJfrx
-https://imgur.com/a/cwdFLSG
+https://i.postimg.cc/kGdGztcX/IMG-20251025-WA0050.jpg
+https://i.postimg.cc/HkjYS2md/872a6e8fa6aafc89c25de032d63c0966.jpg
