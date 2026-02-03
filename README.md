@@ -11,7 +11,7 @@ body {
   font-family: Georgia, serif;
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-    url(https://i.postimg.cc/kGdGztcX/IMG-20251025-WA0050.jpg) center / cover no-repeat fixed;
+    url("https://i.postimg.cc/kGdGztcX/IMG-20251025-WA0050.jpg") center / cover no-repeat fixed;
   color: white;
 }
 
