@@ -154,7 +154,7 @@ button:hover {
 
     <p>
       because I choose you for me,<br>
-      every day, without hesitation, i HAVE BEEN THINKING ABOUT YOU ALL DAY TOO❤️,always!
+      every day, without hesitation, i HAVE BEEN THINKING ABOUT YOU ALL DAY❤️,always!
     </p>
 
     <p><em>Scroll down 💌</em></p>
