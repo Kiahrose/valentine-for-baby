@@ -218,10 +218,36 @@ button:hover { transform: scale(1.1); }
 <script>
 function openGift() {
   document.getElementById("poem").classList.remove("hidden");
+  document.getElementById("letter").classList.remove("hidden");
+  setTimeout(() => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth"
+    });
+  }, 300);
+}function openGift() {
+  document.getElementById("poem").classList.remove("hidden");
+  document.getElementById("letter").classList.remove("hidden");
+  setTimeout(() => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth"
+    });
+  }, 300);
+}
+  document.getElementById("poem").classList.remove("hidden");
   window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
 }
 
 function openLetter() {
+  document.getElementById("question").classList.remove("hidden");
+  setTimeout(() => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  }, 300);
+}
   document.getElementById("question").classList.remove("hidden");
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }
