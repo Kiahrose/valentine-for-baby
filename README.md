@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Baby 💕</title>
+<title>For My Baby 💕</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -99,7 +99,7 @@ button:hover {
 <section>
   <div class="card">
     <h1>Hey baby 💕</h1>
-    <p>I made something just for you.</p>
+    <p>Miss cute face made something just for you cause she loves you.</p>
     <div class="gift" onclick="scrollToPoem()">🎁</div>
     <p><em>Tap the gift</em></p>
   </div>
@@ -108,7 +108,7 @@ button:hover {
 <!-- SECTION 2 -->
 <section id="poem">
   <div class="card">
-    <h1>My handsome wife,</h1>
+    <h1>To My handsome wife,</h1>
 
     <p>
       this is my way of saying I want to do life with you.<br>
@@ -154,7 +154,7 @@ button:hover {
 
     <p>
       because I choose you for me,<br>
-      every day, without hesitation.
+      every day, without hesitation, i HAVE BEEN THINKING ABOUT YOU ALL DAY TOO❤️,always!
     </p>
 
     <p><em>Scroll down 💌</em></p>
