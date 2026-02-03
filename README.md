@@ -182,7 +182,7 @@ button:hover {
 
 <!-- MEME -->
 <div id="meme">
-  <img src="DANCING_GIF_URL">
+  <img src="https://i.postimg.cc/HkjYS2md/872a6e8fa6aafc89c25de032d63c0966.jpg">
 </div>
 
 <script>
